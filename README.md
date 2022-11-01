@@ -14,7 +14,15 @@ support for this usage.
 
 ## Instructions
 
-> This relies on the template for unraid community applications from <https://github.com/deasmi/unraid-tailscale>. I currently don't know how to make these templates.
+First off, the use of my image relies  on the template for unraid community applications from <https://github.com/deasmi/unraid-tailscale>. I currently don't know how to make these templates.  Simply change the image to:
+
+`iancleary/unraid-tailscale:TAG` with a tag for matching the badge below.
+
+![Docker Version](https://img.shields.io/docker/v/iancleary/unraid-tailscale)
+
+If it were `1.32.2`, the image would be `iancleary/unraid-tailscale:1.32.2`.
+
+----
 
 ![Unraid Docker Template Screenshot](images/Unraid_Template_deasmi_unraid-tailscale.png)
 
