@@ -12,6 +12,16 @@ This is intentended to provide access to the unraid server itself over tailscale
 It is possible to get this working using UP_FLAGS however as this was never the intention for this container I cannot provide
 support for this usage.
 
+## Instructions
+
+> This relies on the template for unraid community applications from <https://github.com/deasmi/unraid-tailscale>. I currently don't know how to make these templates.
+
+![Unraid Docker Template Screenshot](images/Unraid_Template_deasmi_unraid-tailscale.png)
+
+** IMPORTANT When you first start this container you must check the log file for the logon URL and then enter it into a browser and logon to tail scale. I would then also advise setting the keys to not expire for your unraid host **
+
+![Unraid Docker Logs Screenshot](images/Unriad-Tailscale-Logs.png)
+
 ## Optional Env Vars
 
 - `UP_FLAGS` &ndash; Pass flags to the `tailscale up` command run on start-up
