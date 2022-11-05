@@ -19,11 +19,11 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ".:*?## "}; {printf "\033[36m%-25s\033[0m %s\n", $$1, $$2}'
 
 build:
-build: ## Make the latest build of the image
-	./build.sh $(VERSION)
+build: ## Make the latest build of the image (version is defined in make.env)
+	./build.sh $(IMAGE) $(VERSION)
 
 push: 
-push: ## push the latest version to docker hub
+push: ## push the latest version to docker hub (version is defined in make.env)
 	docker push $(IMAGE):$(VERSION)
 	docker push $(IMAGE):$(LATEST)
 

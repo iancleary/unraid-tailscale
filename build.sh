@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 
-VERSION=$1
-DEV=$2
+IMAGE=$1
+VERSION=$2
+DEV=$3
+
 
 if [ -z "${VERSION}" ] 
 then
  exit "build.sh <version>"
+fi
+
+if [ -z "${IMAGE}" ]
+then
+ exit "build.sh <image>"
 fi
 
 if [[ -z "${DEV}" || "${DEV}" != "dev" ]]
@@ -19,7 +26,7 @@ else
     echo "Building dev"
 fi
 
-docker build --no-cache --build-arg VERSION=$VERSION -t iancleary/unraid-tailscale:${FULL_TAG} .
+docker build --no-cache --build-arg VERSION=$VERSION -t ${IMAGE}:${FULL_TAG} .
 
 ret=$?
 if [ $ret -ne 0 ]; then
@@ -27,11 +34,11 @@ if [ $ret -ne 0 ]; then
 	exit 1;
 fi
 
-docker tag iancleary/unraid-tailscale:${FULL_TAG}
+docker tag ${IMAGE}:${FULL_TAG}
 
 if [ $DEV_BUILD != 1 ];
 then
-   docker tag iancleary/unraid-tailscale:${FULL_TAG} iancleary/unraid-tailscale:latest
+   docker tag ${IMAGE}:${FULL_TAG} ${IMAGE}:latest
 else
-    docker push iancleary/unraid-tailscale:${FULL_TAG}
+    docker push ${IMAGE}:${FULL_TAG}
 fi
