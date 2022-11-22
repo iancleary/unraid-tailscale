@@ -11,7 +11,7 @@ IMAGE=$(NS)/$(IMAGE_NAME)
 SHELL:=bash
 
 # - to suppress if it doesn't exist
--include make.env
+include make.env
 
 help:
 # http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
