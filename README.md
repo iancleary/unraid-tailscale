@@ -43,14 +43,16 @@ Please note that support cannot be provided for the use of UP_FLAGS
 > Update make.env with version of tailscale package
 
 ```bash
+make change BUMP=<new-version-number>
+```
+
+> Build and Push to Docker Hub
+
+```
 docker login -u iancleary
 make build
 make push
 ```
-
-### Dev
-
-TBD if required
 
 ## Authors
 
