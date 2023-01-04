@@ -20,7 +20,7 @@ First off, the use of my image relies  on the template for unraid community appl
 
 ![Docker Version](https://img.shields.io/docker/v/iancleary/unraid-tailscale)
 
-If it were `1.34.1`, the image would be `iancleary/unraid-tailscale:1.34.1`.
+If it were `1.34.2`, the image would be `iancleary/unraid-tailscale:1.34.2`.
 
 ----
 
