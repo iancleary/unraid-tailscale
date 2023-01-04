@@ -28,7 +28,7 @@ push: ## push the latest version to docker hub (version is defined in make.env)
 	docker push $(IMAGE):$(LATEST)
 
 change:
-change: ## change to a new version
+change: ## change to a new version (make change BUMP=1.34.2)
 	@find . -type f -exec sed -i 's/$(VERSION)/$(BUMP)/g' {} \;
 
 .DEFAULT_GOAL := help
