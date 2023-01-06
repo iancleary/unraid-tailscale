@@ -4,6 +4,7 @@ IMAGE=$1
 VERSION=$2
 DEV=$3
 
+echo "$IMAGE:$VERSION"
 
 if [ -z "${VERSION}" ] 
 then
@@ -26,7 +27,7 @@ else
     echo "Building dev"
 fi
 
-docker build --no-cache --build-arg VERSION=$BUMP -t ${IMAGE}:${FULL_TAG} .
+docker build --no-cache --build-arg VERSION=$VERSION -t ${IMAGE}:${FULL_TAG} .
 
 ret=$?
 if [ $ret -ne 0 ]; then
