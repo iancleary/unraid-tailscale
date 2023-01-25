@@ -12,13 +12,26 @@ help:
 build:
   ./build.sh $IMAGE $VERSION
 
-# push the latest version to docker hub (version is defined in make.env) 
-push: 
+# push the latest version to docker hub (version is defined in make.env)
+push:
   docker push $IMAGE:$VERSION
   docker push $IMAGE:$LATEST
+
+# show current version (in .env)
+version:
+  # version := grep -i "VERSION" .env | cut -d "=" -f2
+  echo $VERSION
+
+# bump version to new version
+bump TO:
+  @#https://www.linode.com/docs/guides/linux-sd-command/
+
+  sd $VERSION '{{TO}}' .env
+  sd $VERSION '{{TO}}' README.md
 
 # change to a new version (just change 1.34.2 1.34.3)
 change FROM TO:
   @#https://www.linode.com/docs/guides/linux-sd-command/
+
   sd '{{FROM}}' '{{TO}}' .env
   sd '{{FROM}}' '{{TO}}' README.md
