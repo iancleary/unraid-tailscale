@@ -29,7 +29,7 @@ bump TO:
   sd $VERSION '{{TO}}' .env
   sd $VERSION '{{TO}}' README.md
 
-# change to a new version (just change 1.34.2 1.34.3)
+# change to a new version (just change 1.36.2 1.38.0)
 change FROM TO:
   @#https://www.linode.com/docs/guides/linux-sd-command/
 
