@@ -20,7 +20,7 @@ Simply change the image to:
 
 `iancleary/unraid-tailscale:TAG` with a tag for matching the badge below.
 
-If it were `1.38.1`, the image would be `iancleary/unraid-tailscale:1.38.1`.
+If it were `X.Y.Z`, the image would be `iancleary/unraid-tailscale:X.Y.Z`.  See the badge below for the latest version.
 
 ![Docker Version](https://img.shields.io/docker/v/iancleary/unraid-tailscale)
 
@@ -42,21 +42,9 @@ Please note that support cannot be provided for the use of UP_FLAGS
 
 ## Workflow to build image
 
-### Production
+Github Actions are used to build the image, see [publish.yml](.github/workflows/publish.yml).
 
-> Update .env and README.md with version of tailscale package
-
-```bash
-just change old-version new-version
-```
-
-> Build and Push to Docker Hub
-
-```
-docker login -u iancleary
-just build
-just push
-```
+For the build logs, see this repo's [actions](https://github.com/iancleary/unraid-tailscale/actions).
 
 ## Authors
 
