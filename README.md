@@ -20,7 +20,7 @@ Simply change the image to:
 
 `iancleary/unraid-tailscale:TAG` with a tag for matching the badge below.
 
-If it were `1.36.2`, the image would be `iancleary/unraid-tailscale:1.36.2`.
+If it were `1.38.1`, the image would be `iancleary/unraid-tailscale:1.38.1`.
 
 ![Docker Version](https://img.shields.io/docker/v/iancleary/unraid-tailscale)
 

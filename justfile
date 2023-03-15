@@ -9,12 +9,12 @@ help:
   just -l
 
 # Make the latest build of the image (version is defined in .env)
-build:
-  ./build.sh $IMAGE $VERSION
+build VERSION:
+  ./build.sh $IMAGE '{{VERSION}}'
 
 # push the latest version to docker hub (version is defined in make.env)
-push:
-  docker push $IMAGE:$VERSION
+push VERSION:
+  docker push $IMAGE:'{{VERSION}}'
   docker push $IMAGE:$LATEST
 
 # show current version (in .env)
