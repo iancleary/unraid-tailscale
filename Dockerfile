@@ -2,9 +2,8 @@ FROM alpine:latest as build
 RUN apk add --no-cache bash wget
 WORKDIR /work
 ARG VERSION
-ENV VERSION ${VERSION}
 COPY ./download.sh .
-RUN ./download.sh 
+RUN ./download.sh $VERSION
 
 FROM alpine:latest as deploy
 RUN apk add --no-cache ca-certificates iptables iproute2
