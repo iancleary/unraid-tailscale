@@ -23,7 +23,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            name/app
+            iancleary/unraid-tailscale
           tags: |
             type=ref,event=branch
             type=ref,event=pr
