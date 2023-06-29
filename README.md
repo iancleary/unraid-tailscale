@@ -1,5 +1,15 @@
 # unraid-tailscale
 
+ 	🚨 	🚨  ARCHIVED 🚨 	🚨
+
+> I recommend you use [dkaser/unraid-tailscale](https://github.com/dkaser/unraid-tailscale).  The plugin route works even if array is stopped, which is better for remote support.
+>
+> I initially made this repo to enable me to be in control of updating the docker image at my convenience versus waiting for others
+>
+> Please use the plugin as this is archived.
+
+-----------
+
 Docker build files for tailscale on unraid
 
 ![GitHub](https://img.shields.io/github/license/iancleary/unraid-tailscale)
